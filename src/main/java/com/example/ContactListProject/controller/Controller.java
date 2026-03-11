@@ -58,4 +58,10 @@ public class Controller {
         return Files.readAllBytes(Paths.get(PHOTO_DIRECTORY+filename));
 
     }
+
+    @DeleteMapping("/{userId")
+    public ResponseEntity<String> deleteContact(Contact contact){
+        service.deleteContact(contact);
+        return ResponseEntity.ok("successful");
+    }
 }
