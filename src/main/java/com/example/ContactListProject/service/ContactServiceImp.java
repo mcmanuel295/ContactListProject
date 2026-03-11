@@ -82,7 +82,7 @@ public class ContactServiceImp implements  ContactService{
 
             Files.copy(image.getInputStream(),fileStorageLocation.resolve(filename ),REPLACE_EXISTING);
             return ServletUriComponentsBuilder
-                    .fromCurrentContextPath().path("/contacts/image/"+userId+fileExtension.apply(image.getOriginalFilename())).toUriString();
+                    .fromCurrentContextPath().path("/contacts/image/"+filename).toUriString();
 
         }
         catch (Exception ex){
