@@ -20,7 +20,7 @@ import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 @RequestMapping("/contacts")
 public class Controller {
 
-    private ContactService service;
+    private final ContactService service;
 
     public Controller(ContactService service) {
         this.service = service;
@@ -28,8 +28,7 @@ public class Controller {
 
     @PostMapping
     public ResponseEntity<Contact> createContact(@RequestBody Contact contact){
-
-        return ResponseEntity.created(URI.create("/contacts/{user ID}")).body(service.createContact(contact));
+        return ResponseEntity.created(URI.create("/contacts/userID")).body(service.createContact(contact));
     }
 
     @GetMapping
