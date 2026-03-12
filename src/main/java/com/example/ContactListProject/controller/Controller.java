@@ -45,8 +45,8 @@ public class Controller {
     }
     
 
-    @PutMapping("/{userId}/upload")
-    public ResponseEntity<String> uploadPhoto(@PathVariable("userId") String userId,
+    @PutMapping("/upload")
+    public ResponseEntity<String> uploadPhoto(@RequestParam("userId") String userId,
                                         @RequestParam("file") MultipartFile file
                                         ){
 
