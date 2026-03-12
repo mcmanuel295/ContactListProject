@@ -13,7 +13,7 @@ import org.hibernate.annotations.UuidGenerator;
 @Setter
 @Getter
 @Entity
-@JsonInclude(JsonInclude.Include.NON_DEFAULT)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name="contacts")
 public class Contact {
 
