@@ -59,7 +59,7 @@ public class Controller {
 
     }
 
-    @DeleteMapping("/{userId")
+    @DeleteMapping("/{userId}")
     public ResponseEntity<String> deleteContact(Contact contact){
         service.deleteContact(contact);
         return ResponseEntity.ok("successful");
