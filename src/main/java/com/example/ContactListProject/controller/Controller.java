@@ -54,7 +54,7 @@ public class Controller {
     }
 
     @GetMapping(value = "/image/{filename}", produces = {IMAGE_PNG_VALUE,IMAGE_JPEG_VALUE})
-    public byte[] getPhoto(@RequestParam("filename") String filename) throws IOException {
+    public byte[] getPhoto(@PathVariable("filename") String filename) throws IOException {
         return Files.readAllBytes(Paths.get(PHOTO_DIRECTORY+filename));
 
     }
